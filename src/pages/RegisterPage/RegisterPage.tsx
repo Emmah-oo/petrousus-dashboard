@@ -158,18 +158,18 @@ const RegisterPage: Component = () => {
 							<FormInput
 								field="first_name"
 								icon={NameIcon}
-								placeholder="Username"
+								placeholder="First Name"
 								autoComplete="given-name"
 								autoCapitalize="words"
 								className="flex-[1.3]"
 							/>
-							{/* <FormInput
+							<FormInput
 								field="last_name"
 								placeholder="Last Name"
 								autoComplete="family-name"
 								autoCapitalize="words"
 								className="flex-1"
-							/> */}
+							/>
 						</div>
 						<FormInput
 							field="email"
@@ -227,8 +227,8 @@ const RegisterPage: Component = () => {
 								<span className="ml-3">I agree to the Terms and Conditions and Privacy Policy</span>
 							</div>
 							<div className="login-footer flex-gap-y-4 flex flex-col mt-2 <xs:mt-2">
-							</div>
-						</Loader> */}
+							</div> */}
+						{/* </Loader> */}
 						<Button color="primary" loading={registerRequest.fetching} className="login-btn">
 									Create Account
 						</Button>

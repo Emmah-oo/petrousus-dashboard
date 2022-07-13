@@ -43,7 +43,7 @@ const Sidebar: Component = () => {
 	return (
 		<Card className="sidebar dashboard-sb">
 			<CardTitle center>
-				<div className="logo ml-1">
+				<div className="logo ml-1 -mt-6.5">
                     <img src= {Logo} alt="Petrousus" />
                 </div>
 			</CardTitle>

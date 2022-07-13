@@ -8,18 +8,14 @@
 }
 
 .sidebar .list > .button:hover {
-	color: linear-gradient(180deg, #6FBF86 0%, #34B1A6 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent; 
-	-moz-background-clip: text;
-	-moz-text-fill-color: transparent;
+	color: #6FBF86;
 	background: #1D2836;
 	box-shadow: 0px 1px 1px 0px #FFFFFF1C inset;
 	box-shadow: 0px -2px 1px 0px #00000066 inset;
 }
 
 .sidebar .list > .button:active {
-	color: linear-gradient(180deg, #6FBF86 0%, #34B1A6 100%);
+	color: #6FBF86;
 	background: #1D2836;
 	box-shadow: 0px 1px 1px 0px #FFFFFF1C inset;
 	box-shadow: 0px -2px 1px 0px #00000066 inset;
