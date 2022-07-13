@@ -1,0 +1,22 @@
+.login-btn {
+    background: linear-gradient(180deg, #6FBF86 0%, #34B1A6 100%) !important;
+    color: #fff !important;
+}
+
+.link {
+    color: #fff;
+    font-weight: bold;
+}
+
+p {
+    color: rgb(181, 181, 181);
+}
+
+span {
+    display: flex;
+    gap: 5px;
+}
+
+.forgot-pass {
+    font-size: 10px;
+}

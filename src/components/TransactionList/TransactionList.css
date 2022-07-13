@@ -1,0 +1,190 @@
+.transactions-wrapper {
+	@apply
+		h-full
+}
+
+.transactions-list {
+	@apply
+		shadow-card
+		rounded-card
+		overflow-hidden
+}
+
+.transaction-item:not(:last-child) {
+	@apply
+		border-b-1
+		border-divider
+}
+
+.transaction-item {
+	@apply
+		p-4
+		flex
+		bg-background-paper
+
+		<md:overflow-x-auto
+}
+
+.transaction-item .item-value {
+	@apply
+		flex
+		items-center
+		flex-1
+		font-semibold
+		leading-[1.1em]
+		<sm:text-sm
+}
+
+.transaction-item .value-group {
+	@apply
+		flex flex-col
+		w-full
+}
+
+.transaction-item .transaction-chip {
+	@apply
+		font-normal
+		max-w-24
+		justify-center
+		mr-1
+		w-full
+		<md:p-1
+		<sm:text-xs
+}
+
+.transaction-item .value-sub {
+	@apply
+		text-text-secondary
+		text-sm
+		<sm:text-xs
+}
+
+.transaction-item .token-value {
+	@apply
+		w-32
+		flex-grow-0
+		!flex-shrink-0
+}
+
+.transaction-item .action-value {
+	flex-shrink: 0 !important;
+	flex-grow: 0 !important;
+	@apply
+		!min-w-18
+		!w-18
+}
+
+.transaction-item .token-image {
+	@apply
+		w-9
+		h-9
+		rounded-full
+		mr-3
+}
+
+.transaction-item .token-value span {
+	@apply
+		font-semibold
+}
+
+.transaction-item-body {
+	@apply
+		flex flex-row
+		!pr-12
+		justify-between
+		<md:justify-start
+}
+
+
+.transaction-body-item {
+	@apply
+		flex
+		flex-col
+		p-2
+}
+
+.transaction-body-label {
+	@apply
+		font-bold
+		text-sm
+		mb-1
+}
+
+.transaction-body-value {
+	@apply
+		my-auto
+}
+
+.transaction-details {
+	@apply
+		w-full
+		max-w-110
+}
+
+.transaction-details .qr-code {
+	@apply
+		mx-auto
+		flex-shrink-0
+		mr-4
+}
+
+.transaction-details-body {
+	@apply
+		flex flex-col
+}
+
+.transaction-details .form-item {
+	@apply
+		flex flex-col
+}
+
+.transaction-details label {
+	@apply
+		mb-0.5
+		text-sm
+}
+
+.transaction-details .pending-container {
+	@apply
+		flex
+		!mb-4
+}
+
+.transaction-details .warning {
+	@apply
+		relative
+		flex
+		p-2
+		px-3
+		text-base
+		leading-[1.2em]
+}
+
+.transaction-details .warning::before {
+	content: " ";
+	@apply
+		absolute
+		top-0 left-0
+		w-full h-full
+		bg-warning-light
+		opacity-40
+		rounded-item
+		border-2
+		border-warning-dark
+}
+
+.transaction-details .warning svg {
+	@apply
+		relative
+		z-2
+		top-1.5
+		mr-1
+		fill-current
+}
+
+.transaction-details .warning-wrapper {
+	@apply
+		my-auto
+		relative
+		z-2
+}

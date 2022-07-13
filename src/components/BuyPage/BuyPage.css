@@ -1,0 +1,159 @@
+.buy-page {
+	@apply
+		h-full
+		flex-1
+}
+
+.buy-page .card {
+	box-shadow: 0px 0px 50px rgba(0,0,0,0.6);
+	@apply
+		+xs:rounded-card
+		flex flex-col
+		relative overflow-auto
+}
+
+.buy-page .card-body {
+	@apply
+		flex flex-col
+		flex-1
+}
+
+.buy-page .form {
+	@apply
+		flex flex-col 
+}
+
+.buy-page .form-item {
+	@apply
+		flex flex-col
+}
+
+.buy-page .form-item > label, .buy-page .form-item > span {
+	@apply
+		text-sm mb-2
+}
+
+.buy-page .total-tiered-bonus {
+	@apply
+		ml-auto
+		text-sm
+		px-1.5
+		py-0.5
+		bg-background-contrast
+		rounded
+}
+
+/* .bonus-list {
+	@apply
+		flex flex-col
+		py-2
+		px-4
+		bg-background-contrast
+		rounded-item
+} */
+
+.bonus-list.loading .bonus-item {
+	@apply
+		py-1
+}
+
+.bonus-item {
+	@apply
+		flex
+}
+
+.bonus-item .bonus-label {
+}
+
+.bonus-item .bonus-percent {
+	@apply
+		ml-auto
+}
+
+.bonus-item .bonus-usd {
+	@apply
+		text-right
+		ml-2
+		min-w-20
+}
+
+.bonus-item.total {
+	@apply
+		relative
+		flex-1
+		pr-2
+}
+
+.bonus-item.total .bonus-percent, .bonus-item.total .bonus-usd {
+	@apply
+		text-success-light
+		font-semibold
+}
+
+.currency-display-item {
+	@apply
+		py-2
+		px-4
+		flex
+		items-center
+		justify-start
+		bg-background-paperLight
+		h-full
+		rounded-r-item
+		w-33
+}
+
+.currency-display-item .currency-image-container {
+	@apply
+		relative
+		flex
+}
+
+.currency-display-item .currency-image {
+	@apply
+		!m-auto
+		w-8 h-8
+		!rounded-full
+		object-cover object-center
+}
+
+.currency-display-item .currency-display-item {
+	@apply
+		flex
+		items-center justify-center
+		h-8
+		w-8
+		object-center
+		object-cover
+		rounded-full
+}
+
+.currency-display-item .chain-chip {
+	@apply
+		flex
+		items-center justify-center
+		absolute
+		-bottom-0.5
+		-right-0.5
+		w-3.5 h-3.5
+		bg-background-default
+		rounded-full
+		text-2xs
+}
+
+.currency-display-item .text-container {
+	@apply
+		flex flex-col
+		ml-2
+		text-base
+		font-primary
+		relative
+		mr-auto
+}
+
+.buy-page .summary-container {
+	@apply
+		p-4
+		bg-background-contrast
+		rounded-button
+}

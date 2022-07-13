@@ -1,0 +1,15 @@
+.page-container {
+	@apply
+		overflow-x-hidden
+		flex flex-col
+		flex-1
+		min-h-[var(--screen-height)]
+
+}
+
+
+.page-container.logged-in {
+	@apply
+		<md:pb-16
+		+md:pl-80
+}

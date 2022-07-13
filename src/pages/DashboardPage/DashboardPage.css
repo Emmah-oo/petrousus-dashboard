@@ -1,0 +1,72 @@
+.dashboard-page.dashboard-page {
+	background: #131a22;
+	@apply
+		flex
+
+		max-w-240
+		w-full
+		mx-auto
+
+		+md:flex-1
+		<md:min-h-[var(--screen-height)]
+
+		<xl:flex-col-reverse
+		!pb-12
+}
+
+.dashboard-page .card-group {
+	@apply
+		max-w-250
+		!mx-auto
+}
+
+.head {
+	font-size: 2rem !important;
+	margin-left: 1.5rem !important;
+}
+
+.dashboard-card {
+	@apply
+		flex flex-col
+}
+
+.dashboard-card-1 {
+	background: #18222E;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 4rem;
+}
+
+.dashboard-card .card-header {
+	@apply
+		flex
+		items-center
+		justify-between
+		mb-2
+		text-lg
+		text-text-primary
+		font-semibold
+		
+}
+
+.dashboard-card .card-header .chip {
+	@apply
+		ml-4
+		bg-primary-main
+		text-primary-contrastText
+}
+
+.dashboard-card .value {
+	@apply
+		font-bold
+}
+
+.dashboard-card .value.large {
+	@apply
+		text-3xl
+}
+
+.dashboard-card .countdown-container {
+	@apply
+		mx-auto
+}

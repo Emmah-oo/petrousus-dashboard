@@ -1,0 +1,105 @@
+.dashboard-sb {
+	background: #18222E;
+}
+
+.sidebar .list > .button {
+	color: #fff;
+	background-color: #18222E;
+}
+
+.sidebar .list > .button:hover {
+	color: linear-gradient(180deg, #6FBF86 0%, #34B1A6 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; 
+	-moz-background-clip: text;
+	-moz-text-fill-color: transparent;
+	background: #1D2836;
+	box-shadow: 0px 1px 1px 0px #FFFFFF1C inset;
+	box-shadow: 0px -2px 1px 0px #00000066 inset;
+}
+
+.sidebar .list > .button:active {
+	color: linear-gradient(180deg, #6FBF86 0%, #34B1A6 100%);
+	background: #1D2836;
+	box-shadow: 0px 1px 1px 0px #FFFFFF1C inset;
+	box-shadow: 0px -2px 1px 0px #00000066 inset;
+}
+
+.sidebar {
+	@apply
+		fixed
+		top-0
+		left-0
+		rounded-none
+		flex flex-col
+		min-w-80
+		h-[var(--screen-height)]
+		z-10
+
+		<md:w-full
+		<md:h-16
+		<md:top-[initial]
+		<md:bottom-0
+		<md:border-t-1
+		<md:border-divider
+}
+
+.sidebar .card-title {
+	@apply
+		<md:hidden
+}
+
+.sidebar .card-body {
+	@apply
+		flex flex-col
+		flex-1
+
+		<md:p-0
+		<md:flex-row
+}
+
+.sidebar .separator {
+	@apply
+		flex-1
+		flex
+		justify-center
+		items-center
+
+		<md:hidden
+}
+
+.sidebar .list {
+	@apply
+		flex flex-col
+		<md:flex-row
+		<md:justify-evenly
+		<md:flex-1
+}
+
+.sidebar .bottom-list {
+	@apply
+		<md:hidden
+}
+
+.sidebar .list > .button {
+	@apply
+		<md:h-full
+		<md:flex <md:flex-col
+		<md:!items-center <md:!justify-center
+		<md:text-xs
+		<md:!py-0
+		<md:max-w-32
+		<md:flex-1
+}
+
+.sidebar .list > .button .icon-container {
+	@apply
+		<md:mr-0
+		<md:mb-0.5
+}
+
+.sidebar .list > .button .icon-container svg {
+	@apply
+		<md:w-7
+		<md:h-7
+}

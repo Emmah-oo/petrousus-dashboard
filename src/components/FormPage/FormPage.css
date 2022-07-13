@@ -1,0 +1,45 @@
+.form-page {
+	@apply
+		flex flex-col
+		w-full
+		h-[var(--screen-height)]
+		justify-center
+		text-left
+		-mt-30
+		<xs:h-auto
+		<xs:min-h-[var(--screen-height)]
+}
+
+.form-background {
+	@apply
+		z-[-1]
+		w-full
+		h-full
+		absolute
+		top-0
+		left-0
+		object-center
+		object-cover
+		<xs:hidden
+}
+
+.form-card {
+	@apply
+		overflow-y-auto
+		max-h-[calc(var(--screen-height)-2rem)]
+
+		<md:max-h-[calc(var(--screen-height)-4rem)]
+		<xs:max-h-none
+		<xs:w-full
+		<xs:flex-1
+		<xs:rounded-none
+		+xs:w-115
+}
+
+.form-card-wrapper {
+	@apply
+		w-4/5
+		mt-32
+		mx-auto
+		<xs:w-full
+}
