@@ -43,9 +43,7 @@
 }
 
 .button.primary {
-	--bg-color: var(--theme-primary-main);
-	--bg-hover-color: var(--theme-primary-dark);
-	--text-color: var(--theme-primary-contrastText);
+	
 }
 
 .button.secondary {
@@ -61,9 +59,8 @@
 }
 
 .button.bg-light {
-	--bg-color: var(--theme-background-paperLight);
-	--bg-hover-color: var(--theme-background-paperHighlight);
-	--text-color: var(--theme-text-primary);
+	--bg-color :#6CB47B;
+	--text-color: #fff;
 }
 
 .button.bg-paper {

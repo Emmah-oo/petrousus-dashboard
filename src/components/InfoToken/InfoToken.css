@@ -1,0 +1,27 @@
+.info-token {
+    background: #18222E;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+}
+
+.token-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.col h1 {
+    color: #6CB47B;
+    font-size: 1.5rem;
+}
+
+.col p {
+    font-size: 1rem !important;
+}

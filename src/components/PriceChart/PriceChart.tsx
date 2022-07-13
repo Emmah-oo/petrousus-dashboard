@@ -9,6 +9,7 @@ import Card, { CardTitle } from "../Card"
 import Button from "../Button"
 import { Loadable, Loader } from "../Loader"
 import LoaderBar from "../LoaderBar"
+import Cube from "../../svg/icons/cube.png"
 
 const PriceChart: Component = () => {
 	const [ period, setPeriod ] = useState<PriceChartPeriod>("day")
@@ -36,9 +37,14 @@ const PriceChart: Component = () => {
 	return (
 		<Loader loading={priceChartRequest.fetching}>
 			<Card className="price-chart-container">
-				<CardTitle className="px-0 py-0 pb-4 text-2xl">Price Chart</CardTitle>
+				<CardTitle className="px-0 py-0 pb-4 text-lg flex">
+					<div className="title">
+						<img src= {Cube} alt="" />
+						Price Chart
+					</div>
+				</CardTitle>
 				<LoaderBar />
-				<div className="price-chart-buttons flex-gap-x-2">
+				<div className="price-chart-buttons flex-gap-x-2 btn">
 					{(["day", "week", "month", "all"] as PriceChartPeriod[]).map((value) => (
 						<Button
 							key={value}

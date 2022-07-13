@@ -2,6 +2,7 @@ import { useContext } from "react"
 import Card, { CardBody, CardGroup, CardTitle } from "../../components/Card"
 import Chip from "../../components/Chip"
 import Countdown from "../../components/Countdown"
+import InfoToken from "../../components/InfoToken"
 import { Loadable, Loader } from "../../components/Loader"
 import Page from "../../components/Page"
 import PriceChart from "../../components/PriceChart"
@@ -13,6 +14,7 @@ import { Component } from "../../types/Util"
 import { capitalize, formatLargeNumber, formatNumber, getTimeString, roundToDP } from "../../util"
 import "./DashboardPage.css"
 import Globe from "../../svg/icons/globe.png"
+
 
 const DashboardPage: Component = () => {
 	const { currentProject, currProjectRequest } = useContext(ProjectContext)
@@ -43,19 +45,16 @@ const DashboardPage: Component = () => {
 								<div className="card-header small text-white head">
 									Dashboard
 								</div>
-									{/* <Countdown
-										className="mt-2"
-										endDate={new Date(activeStage?.end_date)}
-									/> */}
+									<InfoToken />
 							</Card>
 						)}
 						{(activeStage?.type === "dynamic" || loading) && <PriceChart />}
-						<div className="dashboard-card">
+						{/* <div className="dashboard-card">
 							<div className="card-header">
 								Recent Transactions
 							</div>
 							<TransactionList />
-						</div>
+						</div> */}
 					</div>
 				</Loader>
 			</div>
