@@ -43,7 +43,8 @@
 }
 
 .button.primary {
-	
+	--bg-color :#6CB47B;
+	--text-color: #fff;
 }
 
 .button.secondary {

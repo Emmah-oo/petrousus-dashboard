@@ -1,0 +1,14 @@
+.transaction-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 10vh;
+    background: #18222E;
+}

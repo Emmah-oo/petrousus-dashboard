@@ -1,4 +1,7 @@
 .transactions-wrapper {
+	margin: 1rem 2.5rem;
+	background: #18222E !important;
+	border-radius: 8px;
 	@apply
 		h-full
 }
@@ -8,6 +11,17 @@
 		shadow-card
 		rounded-card
 		overflow-hidden
+}
+
+.transaction-header {
+	display: flex;
+	padding: 2rem 1rem;
+	gap: 10px;
+	align-items: center;
+}
+
+.transaction-header h1 {
+	font-size: 1rem;
 }
 
 .transaction-item:not(:last-child) {
@@ -20,7 +34,7 @@
 	@apply
 		p-4
 		flex
-		bg-background-paper
+		
 
 		<md:overflow-x-auto
 }

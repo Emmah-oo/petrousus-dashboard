@@ -16,6 +16,7 @@ import { Loadable, Loader } from "../Loader"
 import Pagination from "../Pagination"
 
 import WarningIcon from "../../svg/icons/warning.svg"
+import Cube from '../../svg/icons/cube.png';
 
 import "./TransactionList.css"
 import Input from "../Input"
@@ -79,6 +80,10 @@ const TransactionList: Component = () => {
 				>
 					<div className="transactions-list">
 						<div className="transactions-wrapper">
+							<div className="transaction-header">
+								<img src= {Cube} alt="" />
+								<h1>Transaction Data</h1>
+							</div>
 							{(getTransactionsRequest.fetching ? new Array(5).fill(defaultTransaction) : getTransactionsRequest.data?.data || []).map((txn, i) => (
 								<TransactionItem
 									key={i}
@@ -99,7 +104,7 @@ const TransactionList: Component = () => {
 				</Pagination>
 			) : (
 				<div className="transactions-list">
-					<div className="transactions-wrapper">
+					<div className="transactions-wrapper px-10">
 						<div className="transaction-item">No transactions</div>
 					</div>
 				</div>
