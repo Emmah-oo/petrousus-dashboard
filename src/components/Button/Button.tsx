@@ -62,7 +62,7 @@ const Button: Component<ButtonProps> = ({
 		>
 			{Icon && (
 				<div className="icon-container">
-					<Icon />
+					<Icon  />
 				</div>
 			)}
 			{children !== undefined && typeof(children) === "string" && !loading && (

@@ -26,6 +26,9 @@
 }
 
 .dashboard-card {
+	background: #1d2836;
+	margin: 0 2.5rem;
+	border-radius: 10px;
 	@apply
 		flex flex-col
 }
@@ -69,4 +72,7 @@
 .dashboard-card .countdown-container {
 	@apply
 		mx-auto
+}
+.table-header{
+	margin-left: 3rem !important;
 }

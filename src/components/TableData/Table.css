@@ -1,0 +1,26 @@
+tr td:nth-of-type(n + 2) {
+  color: #6fbf86;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  margin: 0rem 2rem;
+}
+th {
+  color: #fff;
+}
+table tr {
+  background: #1d2836;
+  text-align: left;
+  font-weight: bold;
+}
+table th,
+table td {
+  padding: 15px 15px;
+}
+table tr {
+  border-bottom: 2px solid #272b30;
+}

@@ -3,6 +3,9 @@ import Card, { CardBody, CardTitle } from "../Card"
 import "./Sidebar.css"
 
 import DashboardIcon from "../../svg/icons/dashboard-outline.svg"
+import BuyTokenIcon from '../../svg/icons/buy-token.svg'
+import TransactionIcon from '../../svg/icons/transaction.svg'
+import ProfileIcon from '../../svg/icons/profile.svg'
 import AccountIcon from "../../svg/icons/account-circle-outline.svg"
 import SettingsIcon from "../../svg/icons/settings-outline.svg"
 import LogoutIcon from "../../svg/icons/logout.svg"
@@ -21,18 +24,17 @@ import Logo from "../../svg/icons/logo.png"
 import { ProjectContext } from "../../context/ProjectContext"
 
 const navList = [
-	{label: "Main Site", path: "%MAIN_URL%", icon: HomeIcon},
 	{label: "Dashboard", path: "/", icon: DashboardIcon},
-	{label: "Account", path: "/account", icon: AccountIcon},
-	{label: "Buy", path: "/buy", icon: BuyIcon},
-	{label: "Referrals", path: "/referrals", icon: ReferralsIcon},
+	{label: "Buy Token", path: "/token", icon: BuyTokenIcon},
+	{label: "Transaction", path: "/transaction", icon: TransactionIcon},
+	{label: "Profile", path: "/profile", icon: ProfileIcon},
 ]
 
-const bottomList = [
-	{label: "Logout", onClick: ({ logout }: {logout: () => void;}) => {
-		logout()
-	}, icon: LogoutIcon},
-]
+// const bottomList = [
+// 	{label: "Logout", onClick: ({ logout }: {logout: () => void;}) => {
+// 		logout()
+// 	}, icon: LogoutIcon},
+// ]
 
 const Sidebar: Component = () => {
 	const { currentProject } = useContext(ProjectContext)
@@ -70,7 +72,7 @@ const Sidebar: Component = () => {
 				{/* <div className="separator">
 					<div className="divider" />
 				</div> */}
-				<div className="bottom-list list +md:flex-gap-y-2">
+				{/* <div className="bottom-list list flex-end">
 					{bottomList.map((navItem) => (
 						<Button
 							key={navItem.label}
@@ -82,7 +84,7 @@ const Sidebar: Component = () => {
 							{navItem.label}
 						</Button>
 					))}
-				</div>
+				</div> */}
 			</CardBody>
 		</Card>
 	)
