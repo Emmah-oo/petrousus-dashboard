@@ -14,7 +14,7 @@ const TransactionPage: Component = () => {
 	const name = currentProject?.name
 
 	return (
-		<Page path="/Transaction" title="Terms & Conditions">
+		<Page path="/Transaction" title="Transactions">
 			<div className="dashboard-card">
                 <div className="card-header">
                     Recent Transactions
