@@ -3,7 +3,6 @@
 	@apply
 		flex
 
-		max-w-240
 		w-full
 		mx-auto
 
@@ -27,8 +26,10 @@
 
 .dashboard-card {
 	/* background: #1d2836; */
-	margin: 0 2.5rem;
+	margin: 1rem 1rem;
+	padding: 0 !important;
 	border-radius: 10px;
+	width: 95%;
 	@apply
 		flex flex-col
 }
