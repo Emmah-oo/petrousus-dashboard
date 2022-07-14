@@ -25,16 +25,16 @@ import { ProjectContext } from "../../context/ProjectContext"
 
 const navList = [
 	{label: "Dashboard", path: "/", icon: DashboardIcon},
-	{label: "Buy Token", path: "/token", icon: BuyTokenIcon},
+	{label: "Buy Token", path: "/buy", icon: BuyTokenIcon},
 	{label: "Transaction", path: "/transaction", icon: TransactionIcon},
-	{label: "Profile", path: "/profile", icon: ProfileIcon},
+	{label: "Profile", path: "/account", icon: ProfileIcon},
 ]
 
-// const bottomList = [
-// 	{label: "Logout", onClick: ({ logout }: {logout: () => void;}) => {
-// 		logout()
-// 	}, icon: LogoutIcon},
-// ]
+const bottomList = [
+	{label: "Logout", onClick: ({ logout }: {logout: () => void;}) => {
+		logout()
+	}, icon: LogoutIcon},
+]
 
 const Sidebar: Component = () => {
 	const { currentProject } = useContext(ProjectContext)
