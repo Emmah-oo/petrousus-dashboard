@@ -78,10 +78,18 @@
 }
 
 .input-root .icon-container {
+	background: linear-gradient(0deg, #141C26, #141C26),
+	linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+	border-top: 1px solid #FFFFFF1A;
+	border-left: 1px solid #FFFFFF1A;
+	border-bottom: 1px solid #FFFFFF1A;
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+	padding: .94rem;
 	@apply
 		relative
 		flex items-center justify-center
-		p-4
+		
 }
 
 .input-root .icon-container svg {

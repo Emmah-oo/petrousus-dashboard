@@ -4,13 +4,21 @@
 		<md:min-h-[var(--screen-height)]
 }
 
-.account-page .gap-wrapper {
+/* .account-page .gap-wrapper {
 	@apply
 		flex flex-1
 		items-start
 		p-2
 		<lg:flex-col
 
+} */
+
+.account-page .gap-wrapper {
+	background: #131a22;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .account-page .input-root .left-container {
@@ -19,6 +27,9 @@
 }
 
 .profile-card {
+	background: #18222E;
+	border-radius: 8px;
+	order: 1;
 	@apply
 		w-[calc(100%-1rem)]
 		max-w-150 flex-[2]
@@ -32,4 +43,50 @@
 		+lg:min-w-80
 		<md:max-w-none
 
+}
+
+.wallet-title {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: flex-start;
+	gap: 15px;
+	margin-bottom: 1rem;
+}
+
+.header {
+	font-size: 1.5rem;
+	font-weight: normal;
+}
+
+.wallet-body {
+	background: #18222E;
+	border-radius: 8px;
+}
+
+.profile-title {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 15px;
+	padding-top: 2rem;
+	padding-left: 1rem;
+}
+
+.main-body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.language {
+	width: 100%;
+	margin-bottom: 5rem;
+	display: flex;
+	margin-top: -1rem;
+	align-items: center;
+	justify-content: flex-end !important;
+	padding: 0 3rem;
 }

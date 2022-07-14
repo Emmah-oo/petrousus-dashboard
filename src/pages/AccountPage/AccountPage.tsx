@@ -12,6 +12,8 @@ import * as Yup from "yup"
 
 import "./AccountPage.css"
 
+import Globe from "../../svg/icons/globe.png"
+import Cube from "../../svg/icons/cube.png"
 import EmailIcon from "../../svg/icons/email-outline.svg"
 import NameIcon from "../../svg/icons/account-circle-outline.svg"
 import Input from "../../components/Input"
@@ -60,39 +62,54 @@ export const WalletCard: Component = () => {
 	}
 
 	return (
-		<Card className="wallet-card">
-			<CardTitle>
-				Wallet Address
-			</CardTitle>
-			<CardBody className="flex flex-col">
-				<Loader loading={currProjectRequest.fetching}>
-					<Loadable component="p" className="mb-2">
-						Make sure you use an <span className="font-semibold">{currentProject?.wallet?.type}</span> wallet address.
-					</Loadable>
-				</Loader>
-				<Form
-					initialValues={initialValues}
-					validationSchema={Yup.object().shape({wallet: walletAddressSchema})}
-					onSubmit={onSubmit}
-					onUpdate={() => !changed && setChanged(true)}
-				>
-					<FormInput
-						field="wallet"
-						icon={WalletIcon}
-						placeholder="Wallet Address"
-						autoCapitalize="off"
-					/>
-					<Button
-						color="primary"
-						className="mt-4"
-						disabled={!changed || currProjectRequest.fetching}
-						loading={editUserRequest.fetching}
-					>
-						Save Changes
-					</Button>
-				</Form>
-			</CardBody>
-		</Card>
+		<div className="main-body">
+			<div className='language py-5 float-right'>
+				<img src={Globe} alt='Globe' />
+				<select name='select' className='language-select'>
+					<option value='eng'>English</option>
+					<option value='esp'>Spanish</option>
+					<option value='ita'>Italian</option>
+					<option value='ger'>German</option>
+					<option value='frn'>French</option>
+				</select>
+			</div>
+				<Card className="wallet-card">
+					<CardBody className="wallet-body">
+						<div className="wallet-title">
+							<img src= {Cube} alt="" />
+							<h1 className="header">My Wallet</h1>
+						</div>
+						<Loader loading={currProjectRequest.fetching}>
+							<Loadable component="p" className="mb-2">
+								{/* Make sure you use an <span className="font-semibold">{currentProject?.wallet?.type}</span> wallet address. */}
+							</Loadable>
+						</Loader>
+						<Form
+							initialValues={initialValues}
+							validationSchema={Yup.object().shape({wallet: walletAddressSchema})}
+							onSubmit={onSubmit}
+							onUpdate={() => !changed && setChanged(true)}
+						>
+							<FormInput
+								
+								field="wallet"
+								icon={WalletIcon}
+								placeholder="Wallet Address"
+								autoCapitalize="off"
+							/>
+							<Button
+								color="primary"
+								className="mt-4"
+								disabled={!changed || currProjectRequest.fetching}
+								loading={editUserRequest.fetching}
+							>
+								Save Changes
+							</Button>
+						</Form>
+					</CardBody>
+				</Card>
+			</div>
+
 	)
 }
 
@@ -158,9 +175,10 @@ export const ProfileCard: Component = () => {
 
 	return (
 		<Card className="profile-card">
-			<CardTitle>
-				Your Profile
-			</CardTitle>
+			<div className="profile-title">
+					<img src= {Cube} alt="" />
+					<h1 className="header">Profile</h1>
+				</div>
 			<CardBody className="flex flex-col">
 				<Form
 					initialValues={initialValues}
@@ -168,6 +186,7 @@ export const ProfileCard: Component = () => {
 					onSubmit={onSubmit}
 					onUpdate={() => !changed && setChanged(true)}
 				>
+					<label htmlFor="FirstName">First Name</label>
 					<FormInput
 						field="first_name"
 						icon={NameIcon}
@@ -175,6 +194,7 @@ export const ProfileCard: Component = () => {
 						autoComplete="given-name"
 						autoCapitalize="words"
 					/>
+					<label htmlFor="LastName">Last Name</label>
 					<FormInput
 						field="last_name"
 						icon={NameIcon}
@@ -182,6 +202,7 @@ export const ProfileCard: Component = () => {
 						autoComplete="family-name"
 						autoCapitalize="words"
 					/>
+					<label htmlFor="Email">Email</label>
 					<Input
 						disabled
 						icon={EmailIcon}
@@ -190,6 +211,7 @@ export const ProfileCard: Component = () => {
 						autoCapitalize="off"
 						autoComplete="email"
 					/>
+					
 					<Input
 						disabled
 						icon={authContext.user?.is_email_verified === false ? UnverifiedIcon : VerifiedIcon}
@@ -198,10 +220,12 @@ export const ProfileCard: Component = () => {
 						autoCapitalize="off"
 						autoComplete="email"
 					/>
+					<label htmlFor="Number">Phone Number</label>
 					<PhoneInput
 						numberField="phone_number"
 						codeField="country_code"
 					/>
+					<label htmlFor="Nationality">Nationality</label>
 					<NationalityInput field="nationality" />
 					<Button
 						color="primary"

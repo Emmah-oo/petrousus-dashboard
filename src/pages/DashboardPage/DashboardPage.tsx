@@ -39,7 +39,7 @@ const DashboardPage: Component = () => {
         <Loader loading={loading}>
           <div className='flex flex-[2] flex-col flex-gap-y-6'>
             <div className='flex flex-gap-x-6 dashboard-card-1'>
-              <div className='language py-5 float-right'>
+              <div className='dashboard-language py-5 float-right'>
                 <img src={Globe} alt='Globe' />
                 <select name='select' className='language-select'>
                   <option value='eng'>English</option>
@@ -52,7 +52,7 @@ const DashboardPage: Component = () => {
             </div>
             {activeStage?.end_date && (
               <Card className='dashboard-card p-4'>
-                <div className='card-header small text-white head'>
+                <div className='small text-white head'>
                   Dashboard
                 </div>
                 <InfoToken />
@@ -60,13 +60,13 @@ const DashboardPage: Component = () => {
             )}
             {(activeStage?.type === 'dynamic' || loading) && <PriceChart />}
             <div className='dashboard-card'>
-              <div className='card-header'>
-                <div className='flex pt-5 pl-4'>
+              <div className='card-header flex flex-col'>
+                <div className='table-data'>
                   <img src={Cube} alt='' />
                   <span className='pl-2'>Price Chart</span>
                 </div>
+                <Table />
               </div>
-              <Table />
             </div>
           </div>
         </Loader>

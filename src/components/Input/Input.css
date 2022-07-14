@@ -37,8 +37,16 @@
 }
 
 .input-wrapper {
+	background: linear-gradient(0deg, #141C26, #141C26),
+	linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+	border-top: 1px solid #FFFFFF1A;
+	border-right: 1px solid #FFFFFF1A;
+	border-bottom: 1px solid #FFFFFF1A;
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+	padding: .86rem;
 	@apply
-		flex-1 flex p-4
+		flex-1 flex 
 }
 
 .input-container input:-webkit-autofill,

@@ -42,6 +42,8 @@
 }
 
 .dashboard-card .card-header {
+	background: #18222E;
+	border-radius: 8px;
 	@apply
 		flex
 		items-center
@@ -74,6 +76,14 @@
 	@apply
 		mx-auto
 }
+
 .table-header{
 	margin-left: 3rem !important;
+}
+
+.table-data {
+	display: flex;
+	padding: 1rem 2rem;
+	width: 100%;
+	align-items: flex-start;
 }

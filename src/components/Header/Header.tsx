@@ -13,7 +13,7 @@ const Header: Component = () => {
                     <img src= {Logo} alt="Petrousus" />
                 </div>
                 
-                <div className="language">
+                <div className="language-main">
                     <img src={Globe} alt="Globe" />
                     <select name="select" className="language-select">
                         <option value="eng">English</option>
