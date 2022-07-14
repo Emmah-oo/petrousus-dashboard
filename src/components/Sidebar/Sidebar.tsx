@@ -25,9 +25,9 @@ import { ProjectContext } from "../../context/ProjectContext"
 
 const navList = [
 	{label: "Dashboard", path: "/", icon: DashboardIcon},
-	{label: "Buy Token", path: "/buy", icon: BuyTokenIcon},
+	{label: "Buy Token", path: "/buy", icon: BuyIcon},
 	{label: "Transaction", path: "/transaction", icon: TransactionIcon},
-	{label: "Profile", path: "/account", icon: ProfileIcon},
+	{label: "Profile", path: "/account", icon: AccountIcon},
 ]
 
 const bottomList = [
