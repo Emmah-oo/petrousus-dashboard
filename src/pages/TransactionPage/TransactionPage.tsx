@@ -1,7 +1,5 @@
 import React, { useContext } from "react"
-import { Loadable, LoadableParagraph, Loader } from "../../components/Loader"
 import Page from "../../components/Page"
-import { AuthContext } from "../../context/AuthContext"
 import { ProjectContext } from "../../context/ProjectContext"
 import { Component } from "../../types/Util"
 import TransactionList from "../../components/TransactionList"
@@ -30,10 +28,6 @@ const TransactionPage: Component = () => {
                 </div>
                 <div className="card-header py-6 px-10 text-2xl font-bold">
                     Transactions
-                </div>
-                <div className="transactions-table">
-                    {/* <img src= {Cube} alt="" /> */}
-                    
                 </div>
                 <TransactionList />
             </div>
