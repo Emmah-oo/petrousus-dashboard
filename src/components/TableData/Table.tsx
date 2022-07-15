@@ -7,7 +7,7 @@ const Table = () => {
         <th></th>
         <th>Stage 1</th>
         <th>Stage 2</th>
-        <th>Statge 3</th>
+        <th>Stage 3</th>
       </tr>
       <tr>
         <td>Amount of Token</td>

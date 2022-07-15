@@ -25,9 +25,9 @@ import { ProjectContext } from "../../context/ProjectContext"
 
 const navList = [
 	{label: "Dashboard", path: "/", icon: DashboardIcon},
-	{label: "Buy Token", path: "/buy", icon: BuyTokenIcon},
+	{label: "Buy Token", path: "/buy", icon: BuyIcon},
 	{label: "Transaction", path: "/transaction", icon: TransactionIcon},
-	{label: "Profile", path: "/account", icon: ProfileIcon},
+	{label: "Profile", path: "/account", icon: AccountIcon},
 ]
 
 const bottomList = [
@@ -45,7 +45,7 @@ const Sidebar: Component = () => {
 	return (
 		<Card className="sidebar dashboard-sb">
 			<CardTitle center>
-				<div className="logo ml-1 -mt-6.5">
+				<div className="logo ml-4">
                     <img src= {Logo} alt="Petrousus" />
                 </div>
 			</CardTitle>
@@ -69,10 +69,10 @@ const Sidebar: Component = () => {
 						)
 					})}
 				</div>
-				{/* <div className="separator">
+				<div className="separator">
 					<div className="divider" />
-				</div> */}
-				{/* <div className="bottom-list list flex-end">
+				</div>
+				<div className="bottom-list list flex-end">
 					{bottomList.map((navItem) => (
 						<Button
 							key={navItem.label}
@@ -84,7 +84,7 @@ const Sidebar: Component = () => {
 							{navItem.label}
 						</Button>
 					))}
-				</div> */}
+				</div>
 			</CardBody>
 		</Card>
 	)
