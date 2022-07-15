@@ -7,7 +7,7 @@
 }
 
 .input-container:hover {
-	border: 1px solid rgb(6, 153, 68);
+	border: 1px solid #6FBF86;
 }
 
 .input-container.round {
@@ -26,6 +26,7 @@
 }
 
 .input-container input {
+	padding: 0 1rem;
 	@apply
 		bg-transparent
 		outline-none

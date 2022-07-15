@@ -89,4 +89,7 @@
 	align-items: center;
 	justify-content: flex-end !important;
 	padding: 0 3rem;
+	background: #18222e;
+	border: 0;
+	outline: 0;
 }

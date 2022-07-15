@@ -18,6 +18,7 @@
 }
 
 .select-modal .card {
+	background: linear-gradient(0deg, #141C26, #141C26), linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
 	@apply
 		flex flex-col
 		w-full

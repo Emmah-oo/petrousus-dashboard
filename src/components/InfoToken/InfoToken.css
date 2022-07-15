@@ -1,20 +1,24 @@
 .info-token {
     background: #18222E;
-    padding: 2rem 1rem;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     border-radius: 8px;
 }
 
 .token-info {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 40px;
     margin-top: 1rem;
 }
 
 .col {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    border-right: 1px solid #272B30;;
 }
 
 .col h1 {
@@ -24,4 +28,12 @@
 
 .col p {
     font-size: 1rem !important;
+}
+
+.col-4 {
+    border-right: 0;
+}
+
+.token-title {
+    margin-left: -1.5rem !important;
 }

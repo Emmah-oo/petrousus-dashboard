@@ -15,7 +15,7 @@
 
 .transaction-header {
 	display: flex;
-	padding: 2rem 1rem;
+	padding: 1rem 1rem;
 	gap: 10px;
 	align-items: center;
 }
@@ -201,4 +201,8 @@
 		my-auto
 		relative
 		z-2
+}
+
+.transaction-item .value-group {
+	align-items: center;
 }

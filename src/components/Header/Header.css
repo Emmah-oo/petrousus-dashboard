@@ -16,7 +16,7 @@ nav {
 .language-select {
     border: 0;
     outline: 0;
-    background-color: transparent;
+    background: #18222e;
     color: #fff;
     cursor: pointer;
 }

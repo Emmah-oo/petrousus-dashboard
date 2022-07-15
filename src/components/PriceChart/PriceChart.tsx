@@ -41,13 +41,13 @@ const PriceChart: Component = () => {
   // 		.sort((a, b) => a.date.getTime() - b.date.getTime())
   // }, [priceChartRequest.data])
   const dataset = [
-    { name: 'Page A', uv: 200 },
-    { name: 'Page B', uv: 1000 },
-    { name: 'Page C', uv: 3000 },
-    { name: 'Page D', uv: 6000 },
-    { name: 'Page E', uv: 6890 },
-    { name: 'Page F', uv: 7390 },
-    { name: 'Page G', uv: 7490 },
+    { name: '', uv: 10 },
+    { name: '13', uv: 50 },
+    { name: '14', uv: 100 },
+    { name: '15', uv: 150 },
+    { name: '16', uv: 200 },
+    { name: '17', uv: 250 },
+    { name: '18', uv: 300 },
   ];
 
   const tooltipDateFormatter = (value: any): string => {
@@ -71,12 +71,12 @@ const PriceChart: Component = () => {
               <img src={Cube} alt='' />
               <span className='pl-4'>Price Chart</span>
             </div>
-            <select name='select' className='language-select'>
+            <select name='select' className='day-select'>
               <option value='eng'>Last Seven Days</option>
-              <option value='esp'>Spanish</option>
-              <option value='ita'>Italian</option>
-              <option value='ger'>German</option>
-              <option value='frn'>French</option>
+              <option value='esp'>Days</option>
+              <option value='ita'>Weeks</option>
+              <option value='ger'>Months</option>
+              <option value='frn'>Years</option>
             </select>
           </div>
         </CardTitle>
