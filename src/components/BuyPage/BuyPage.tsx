@@ -8,6 +8,8 @@ import FormPage from "../FormPage"
 import Page from "../Page"
 
 import _DropdownIcon from "../../svg/icons/down-chevron.svg"
+import Cube from "../../svg/icons/cube.png"
+import Globe from "../../svg/icons/globe.png"
 
 const DropdownIcon = _DropdownIcon as unknown as Component<any>
 
@@ -183,142 +185,157 @@ const BuyPage: Component = () => {
 
 	return (
 		<Page path="/buy" title="Buy" userRestricted>
-			<Form
-				className={clsx("buy-page", {"modal-open": tokenModalOpen})}
-				initialValues={values}
-				values={values}
-				onUpdate={(newVals) => {
-					setValues(newVals as typeof values)
-					updatePrices()
-				}}
-				onSubmit={() => createPurchaseTransaction()}
-				validationSchema={
-					Yup.object()
-						.shape({
-							usd_amount: Yup.number()
-								.min(minimum, `Can't spend less than ${formatNumber(minimum)}`)
-								.max(maximum, `Can't spend more than ${formatNumber(maximum)}`)
-						})
-					}
-			>
-				<Loader loading={currProjectRequest.fetching}>
-					<FormPage
-						title={`Buy ${currentProject?.symbol.toUpperCase() || "Tokens"}`}
-						classes={{body: "flex-gap-y-6", wrapper: "relative"}}
-						outsideElement={
-							<SelectModalWrapper open={tokenModalOpen}>
-								<FormTokenSelectModal
-									bonuses={activeStage?.bonuses.payment_tokens}
-									className="fixed pointer-events-auto"
-									open={tokenModalOpen}
-									onClose={() => setTokenModalOpen(false)}
-									field="token"
-								/>
-							</SelectModalWrapper>
+			<div className="buy-container">
+			<div className='dashboard-language py-5 pr-15 float-right'>
+                <img src={Globe} alt='Globe' />
+                <select name='select' className='language-select'>
+                  <option value='eng'>English</option>
+                  <option value='esp'>Spanish</option>
+                  <option value='ita'>Italian</option>
+                  <option value='ger'>German</option>
+                  <option value='frn'>French</option>
+                </select>
+              </div>
+				<h1 className="buy-title">Buy Token</h1>
+				<Form
+					className={clsx("buy-page", {"modal-open": tokenModalOpen})}
+					initialValues={values}
+					values={values}
+					onUpdate={(newVals) => {
+						setValues(newVals as typeof values)
+						updatePrices()
+					}}
+					onSubmit={() => createPurchaseTransaction()}
+					validationSchema={
+						Yup.object()
+							.shape({
+								usd_amount: Yup.number()
+									.min(minimum, `Can't spend less than ${formatNumber(minimum)}`)
+									.max(maximum, `Can't spend more than ${formatNumber(maximum)}`)
+							})
 						}
-					>
-						<div className="form-item">
-							<label htmlFor="usd-amount">I want to spend</label>
-							<FormNumberInput
-								id="usd-amount"
-								field="usd_amount"
-								rightContent={<CurrencyItemDisplay currencyItem={dollarItem} />}
-								onFocus={() => lastChanged.current = "usd_amount"}
-							/>
-							<TieredBonusButtons
-								bonuses={activeStage?.bonuses.tiered_fiat || []}
-								onSelect={(item) => updateValue("usd_amount", item.amount)}
-								usdAmount={values.usd_amount}
-							/>
-						</div>
-						<div className="form-item">
-							<label htmlFor="buy-token-amount">I want to buy with</label>
-							<FormNumberInput
-								id="buy-token-amount"
-								field="buy_token_amount"
-								onFocus={() => lastChanged.current = "buy_token_amount"}
-								maxDecimals={5}
-								rightContent={(
-									<FormRender>
-										{(formContext) => (
-											<CurrencyItemDisplay
-												currencyItem={formContext.values.token}
-												currencyList={currencyTokenList}
-												component={Button}
-												type="button"
-												color="bg-light"
-												flush="left"
-												onClick={() => setTokenModalOpen(true)}
-												bonuses={activeStage?.bonuses.payment_tokens}
-											>
-												<DropdownIcon className="w-3 h-3 ml-2 fill-current !text-text-primary" />
-											</CurrencyItemDisplay>
-										)}
-									</FormRender>
-								)}
-							/>
-						</div>
-						<div className="form-item">
-							<span>
-								Eligible Bonuses <Info>
-								Bonuses may change depending on your pending transactions e.g. referral bonus for a transaction might not be awarded if a previous transaction completes and obtains a referral bonus
-								</Info>
-							</span>
-							<Loader loading={bonusLoading}>
-								<Collapse
-									classes={{inner: "bonus-list"}}
-									title={
-										<div className="bonus-item total">
-											<span className="bonus-label">{totalBonusItem.label}</span>
-											<Loadable component="span" length={2} className="bonus-percent">+{floorToDP(totalBonusItem.amount || 0, 0)}%</Loadable>
-											<Loadable component="span" length={2.5} className="bonus-usd">+${floorToDP((totalBonusItem.dollar || 0), 2)}</Loadable>
-										</div>
-									}
-								>
-									{bonuses.map((bonus) => (
-										<div
-											key={bonus.label}
-											className={clsx("bonus-item", {total: bonus.label === "Total"})}
-										>
-											<Loadable component="span" className="bonus-label">{bonus.label}</Loadable>
-											<Loadable component="span" length={2} className="bonus-percent">+{floorToDP(bonus.amount || 0, 0)}%</Loadable>
-											<Loadable component="span" length={2.5} className="bonus-usd">+${floorToDP(bonus.dollar || 0, 2)}</Loadable>
-										</div>
-									))}
-								</Collapse>
-							</Loader>
-						</div>
-						<div className="form-item">
-							<span className="flex">
-								Summary
-								<span className="ml-auto">
-									Quote updates in {timeRemaining}s
-								</span>
-							</span>
-							<div className="summary-container">
-								You send
-								<span className="font-semibold mx-1">
-									{toDisplay(values.buy_token_amount)} {values.token?.symbol}
-								</span>
-								for
-								<span className="font-semibold mx-1">
-									{formatLargeNumber((values.usd_amount + (totalBonus.dollar || 0)) / (activeStage?.token_price || 1))}
-								</span>
-								{currentProject?.symbol}
-							</div>
-						</div>
-						<div className="flex-1 !mb-0" />
-						<Button
-							color="primary"
-							rounded
-							loading={createTransactionRequest.fetching}
-							disabled={currProjectRequest.fetching || activeStageRequest.fetching || minimumAmountRequest.fetching || bonusLoading}
+				>
+					<Loader loading={currProjectRequest.fetching}>
+						<FormPage
+							title=''
+							classes={{body: "flex-gap-y-6", wrapper: "relative"}}
+							outsideElement={
+								<SelectModalWrapper open={tokenModalOpen}>
+									<FormTokenSelectModal
+										bonuses={activeStage?.bonuses.payment_tokens}
+										className="fixed pointer-events-auto"
+										open={tokenModalOpen}
+										onClose={() => setTokenModalOpen(false)}
+										field="token"
+									/>
+								</SelectModalWrapper>
+							}
 						>
-							Pay
-						</Button>
-					</FormPage>
-				</Loader>
-			</Form>
+							<div className="form-item">
+								<label htmlFor="usd-amount">I want to spend</label>
+								<FormNumberInput
+									id="usd-amount"
+									field="usd_amount"
+									rightContent={<CurrencyItemDisplay currencyItem={dollarItem} />}
+									onFocus={() => lastChanged.current = "usd_amount"}
+								/>
+								<TieredBonusButtons
+									bonuses={activeStage?.bonuses.tiered_fiat || []}
+									onSelect={(item) => updateValue("usd_amount", item.amount)}
+									usdAmount={values.usd_amount}
+								/>
+							</div>
+							<div className="form-item">
+								<label htmlFor="buy-token-amount">I want to buy with</label>
+								<FormNumberInput
+									id="buy-token-amount"
+									field="buy_token_amount"
+									onFocus={() => lastChanged.current = "buy_token_amount"}
+									maxDecimals={5}
+									rightContent={(
+										<FormRender>
+											{(formContext) => (
+												<CurrencyItemDisplay
+													currencyItem={formContext.values.token}
+													currencyList={currencyTokenList}
+													component={Button}
+													type="button"
+													color="bg-light"
+													flush="left"
+													onClick={() => setTokenModalOpen(true)}
+													bonuses={activeStage?.bonuses.payment_tokens}
+												>
+													<DropdownIcon className="w-3 h-3 ml-2 fill-current !text-text-primary" />
+												</CurrencyItemDisplay>
+											)}
+										</FormRender>
+									)}
+								/>
+							</div>
+							<div className="form-item">
+								<span>
+									Eligible Bonuses <Info>
+									Bonuses may change depending on your pending transactions e.g. referral bonus for a transaction might not be awarded if a previous transaction completes and obtains a referral bonus
+									</Info>
+								</span> 
+								<div className="eligible-bonus">
+								<Loader loading={bonusLoading}>
+									<Collapse
+										classes={{inner: "bonus-list"}}
+										title={
+											<div className="bonus-item total eligible-bonus">
+												<span className="bonus-label">{totalBonusItem.label}</span>
+												<Loadable component="span" length={2} className="bonus-percent">+{floorToDP(totalBonusItem.amount || 0, 0)}%</Loadable>
+												<Loadable component="span" length={2.5} className="bonus-usd">+${floorToDP((totalBonusItem.dollar || 0), 2)}</Loadable>
+											</div>
+										}
+									>
+										{bonuses.map((bonus) => (
+											<div
+												key={bonus.label}
+												className={clsx("bonus-item", {total: bonus.label === "Total"})}
+											>
+												<Loadable component="span" className="bonus-label">{bonus.label}</Loadable>
+												<Loadable component="span" length={2} className="bonus-percent">+{floorToDP(bonus.amount || 0, 0)}%</Loadable>
+												<Loadable component="span" length={2.5} className="bonus-usd">+${floorToDP(bonus.dollar || 0, 2)}</Loadable>
+											</div>
+										))}
+									</Collapse>
+								</Loader>
+								</div>
+							</div>
+							<div className="form-item">
+								<span className="flex">
+									Summary
+									<span className="ml-auto">
+										Quote updates in {timeRemaining}s
+									</span>
+								</span>
+								<div className="summary-container">
+									You send
+									<span className="font-semibold mx-1">
+										{toDisplay(values.buy_token_amount)} {values.token?.symbol}
+									</span>
+									for
+									<span className="font-semibold mx-1">
+										{formatLargeNumber((values.usd_amount + (totalBonus.dollar || 0)) / (activeStage?.token_price || 1))}
+									</span>
+									{currentProject?.symbol}
+								</div>
+							</div>
+							<div className="flex-1 !mb-0" />
+							<Button
+								color="primary"
+								className="btn"
+								loading={createTransactionRequest.fetching}
+								disabled={currProjectRequest.fetching || activeStageRequest.fetching || minimumAmountRequest.fetching || bonusLoading}
+							>
+								Pay
+							</Button>
+						</FormPage>
+					</Loader>
+				</Form>
+			</div>
 			<TransactionDetails
 				transaction={createdTransaction || defaultTransaction}
 				open={transactionDetailsOpen}

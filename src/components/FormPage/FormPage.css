@@ -2,10 +2,8 @@
 	@apply
 		flex flex-col
 		w-full
-		h-[var(--screen-height)]
 		justify-center
 		text-left
-		-mt-30
 		<xs:h-auto
 		<xs:min-h-[var(--screen-height)]
 }
@@ -37,9 +35,11 @@
 }
 
 .form-card-wrapper {
+	background: #18222ECC;
+	border-radius: 8px;
+	width: 50%;
+	margin-top: 4rem;
 	@apply
-		w-4/5
-		mt-32
 		mx-auto
 		<xs:w-full
 }

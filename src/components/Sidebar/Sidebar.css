@@ -99,3 +99,15 @@
 		<md:w-7
 		<md:h-7
 }
+
+.sidebar .list > .button .icon-container svg:hover {
+	color: #6FBF86;
+}
+
+.sidebar .list > .button .icon-container svg:active {
+	color: #6FBF86;
+}
+
+.sidebar .logo {
+	margin-top: -1.8rem;
+}

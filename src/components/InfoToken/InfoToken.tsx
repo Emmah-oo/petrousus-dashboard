@@ -9,7 +9,7 @@ export interface InfoProps {}
 const InfoToken: Component<InfoProps> = (props) => {
 
 	return (
-        <div className="info-token mt-10 ml-6">
+        <div className="info-token">
             <div className="token-title flex gap-4">
                 <img src= {Cube} alt="" />
                 <h1 className="text-lg">Information Token</h1>
@@ -21,16 +21,16 @@ const InfoToken: Component<InfoProps> = (props) => {
                     <h1>4.000.000</h1>
                 </div>
 
-                <div className="col col-1">
+                <div className="col col-2">
                     <p>30% of Supply</p>
                     <h1>1.200.000</h1>
                 </div>
 
-                <div className="col col-1">
+                <div className="col col-3">
                     <p>Ticker</p>
                     <h1>PSUS</h1>
                 </div>
-                <div className="col col-1">
+                <div className="col col-4">
                     <p>Start Price</p>
                     <h1>-</h1>
                 </div>
