@@ -67,7 +67,7 @@ const PriceChart: Component = () => {
       <Card className='price-chart-container'>
         <CardTitle className='px-0 py-0 pb-4 text-lg flex'>
           <div className='title flex justify-between w-full'>
-            <div className='flex'>
+            <div className='flex flex-title'>
               <img src={Cube} alt='' />
               <span className='pl-4'>Price Chart</span>
             </div>

@@ -51,7 +51,7 @@ const LoginPage: Component = () => {
 	}
 
 	return (
-		<div>
+		<div className="div">
 		<Header />
 		<Page path="/login" title="Login" onlyLoggedOut>
 			<div className="login-card">

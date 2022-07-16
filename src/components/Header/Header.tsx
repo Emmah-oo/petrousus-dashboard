@@ -8,7 +8,7 @@ import Logo from "../../svg/icons/logo.png"
 const Header: Component = () => {
 	return (
 		<div className="header">
-			<nav>
+			<nav className="nav">
                 <div className="logo">
                     <img src= {Logo} alt="Petrousus" />
                 </div>

@@ -16,6 +16,8 @@ import { AlertContext } from "../../context/AlertContext"
 import * as Yup from "yup"
 import { Link } from "react-router-dom"
 
+import Showcase from "../../svg/icons/bg-cubes.png"
+
 const ForgotPasswordPage: Component = () => {
 	const forgotPasswordRequest = useForgotPasswordRequest()
 	const alertContext = useContext(AlertContext)
@@ -60,7 +62,7 @@ const ForgotPasswordPage: Component = () => {
 			<div className="forgot-pass">
 				<FormPage
 					title="Forgot Password"
-					background={"/image/background/background.png"}
+					background={"/image/background/background.svg"}
 					classes={{card: "w-100"}}
 				>
 					
@@ -89,6 +91,9 @@ const ForgotPasswordPage: Component = () => {
 						</Form>
 					
 				</FormPage>
+				{/* <div className="showcase">
+					<img src={Showcase} alt="" />
+				</div> */}
 			</div>
 		</Page>
 		

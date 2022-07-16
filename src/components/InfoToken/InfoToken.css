@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border-right: 1px solid #272B30;;
+    border-right: 1px solid #272B30;
 }
 
 .col h1 {
@@ -35,5 +35,46 @@
 }
 
 .token-title {
-    margin-left: -1.5rem !important;
+   margin-left: -.8rem !important;
+    gap: 15px;
+}
+
+@media (max-width: 700px) {
+    .token-info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .col {
+        border-right: 0;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .col {
+        gap: 10px;
+        margin-top: 1rem;
+    }
+
+    .col h1 {
+        font-size: 1.2rem;
+    }
+
+    .col p {
+        font-size: .8rem !important;
+    }
+
+    .token-info {
+        gap: 20px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    
+    .info-token {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
 }

@@ -130,7 +130,7 @@ const RegisterPage: Component = () => {
 
 	return (
 		
-		<div>
+		<div className="div">
 			<Header />
 			<Page path="/register" title="Register" onlyLoggedOut>
 				<div className="register">

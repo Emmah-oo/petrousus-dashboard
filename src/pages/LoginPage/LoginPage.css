@@ -8,6 +8,10 @@
     font-weight: bold;
 }
 
+.div {
+    height: 100vh;
+}
+
 p {
     color: rgb(181, 181, 181);
 }
@@ -37,11 +41,13 @@ p {
     width: 100%;
 }
 
-/* .form-card {
-    width: 50%;
-    margin-left: 1rem;
-} */
+.flex {
+    align-items: inherit !important;
+}
 
+.card-title {
+    font-size: 2rem;
+}
 @media (max-width: 700px) {
     .login-card {
         grid-template-columns: 1fr;

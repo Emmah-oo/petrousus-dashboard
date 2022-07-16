@@ -22,12 +22,13 @@
 }
 
 .form-card {
+	width: 100%;
+    margin-left: 2rem;
 	@apply
 		overflow-y-auto
 		max-h-[calc(var(--screen-height)-2rem)]
 		<md:max-h-[calc(var(--screen-height)-4rem)]
 		<xs:max-h-none
-		
 		<xs:flex-1
 		<xs:rounded-none
 		
@@ -47,6 +48,10 @@
 	}
 	.form-card-wrapper {
 		width: 100%;
+	}
+
+	.form-card {
+		margin-left: 0;
 	}
 }
 

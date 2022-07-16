@@ -214,3 +214,23 @@ span {
 	width: 50%;
 	margin: 0 auto;
 }
+
+@media (max-width: 500px) {
+	.item-value:nth-child(4) {
+		display: none;
+	}
+
+	span{
+		font-size: .7rem;
+	}
+
+	.transaction-item {
+		padding: .5rem;
+		gap: 20px;
+		font-size: .5rem;
+	}
+
+	.item-value {
+		text-align: center;
+	}
+}

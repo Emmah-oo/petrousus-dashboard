@@ -2,6 +2,8 @@
   background: #18222e;
   margin: 0 2rem;
   padding: 1rem;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .chart-container {
@@ -47,4 +49,23 @@
   border: 0;
   outline: 0;
   cursor: pointer;
+}
+
+.flex {
+  align-items: center;
+}
+
+.flex-title {
+  align-items: center !important;
+}
+
+@media (max-width: 450px) {
+  .pl-4 {
+    font-size: 1rem;
+  }
+
+  .price-chart-container {
+    margin: 0 auto;
+    width: 85%;
+  }
 }
