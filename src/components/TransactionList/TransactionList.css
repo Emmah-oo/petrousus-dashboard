@@ -130,9 +130,7 @@
 }
 
 .transaction-details {
-	@apply
-		w-full
-		max-w-110
+	max-width: 46.5rem;
 }
 
 .transaction-details .qr-code {
@@ -206,3 +204,9 @@
 .transaction-item .value-group {
 	align-items: center;
 }
+
+
+span {
+	display: inline-block;
+}
+

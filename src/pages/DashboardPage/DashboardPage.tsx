@@ -22,6 +22,7 @@ import {
 import './DashboardPage.css';
 import Globe from '../../svg/icons/globe.png';
 import Table from '../../components/TableData/Table';
+import LoggedInHeader from '../../components/LoggedInHeader';
 
 const DashboardPage: Component = () => {
   const { currentProject, currProjectRequest } = useContext(ProjectContext);
@@ -38,18 +39,7 @@ const DashboardPage: Component = () => {
       <div className='dashboard-page <md:gap-2 <sm:!p-4'>
         <Loader loading={loading}>
           <div className='flex flex-[2] flex-col flex-gap-y-6 dashboard-container'>
-            <div className='flex flex-gap-x-6 dashboard-card-1'>
-              <div className='dashboard-language py-5 float-right'>
-                <img src={Globe} alt='Globe' />
-                <select name='select' className='language-select'>
-                  <option value='eng'>English</option>
-                  <option value='esp'>Spanish</option>
-                  <option value='ita'>Italian</option>
-                  <option value='ger'>German</option>
-                  <option value='frn'>French</option>
-                </select>
-              </div>
-            </div>
+          <LoggedInHeader />
             {activeStage?.end_date && (
               <Card className='dashboard-card'>
                 <div className='small text-white head'>

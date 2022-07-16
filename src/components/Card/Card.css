@@ -7,6 +7,7 @@
 }
 
 .card-title {
+	padding: 1rem;
 	@apply
 		relative
 		flex flex-col items-start

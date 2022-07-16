@@ -20,7 +20,7 @@ export interface FormPageProps {
 
 const FormPage: Component<FormPageProps> = (props) => {
 	return (
-		<div className={clsx("form-page", props.classes?.page)}>
+		<div className={clsx("form-page buy-form", props.classes?.page)}>
 			{props.background && <img className="form-background" src={props.background} />}
 			<div className={clsx("form-card-wrapper", props.classes?.wrapper)}>
 				<Card className={clsx("form-card", props.classes?.card)}>

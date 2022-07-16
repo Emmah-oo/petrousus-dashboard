@@ -6,6 +6,7 @@ import Button from "../Button"
 import Form, { FormRender } from "../Form"
 import FormPage from "../FormPage"
 import Page from "../Page"
+import LoggedInHeader from "../LoggedInHeader"
 
 import _DropdownIcon from "../../svg/icons/down-chevron.svg"
 import Cube from "../../svg/icons/cube.png"
@@ -186,16 +187,7 @@ const BuyPage: Component = () => {
 	return (
 		<Page path="/buy" title="Buy" userRestricted>
 			<div className="buy-container">
-			<div className='dashboard-language py-5 pr-15 float-right'>
-                <img src={Globe} alt='Globe' />
-                <select name='select' className='language-select'>
-                  <option value='eng'>English</option>
-                  <option value='esp'>Spanish</option>
-                  <option value='ita'>Italian</option>
-                  <option value='ger'>German</option>
-                  <option value='frn'>French</option>
-                </select>
-              </div>
+			<LoggedInHeader />
 				<h1 className="buy-title">Buy Token</h1>
 				<Form
 					className={clsx("buy-page", {"modal-open": tokenModalOpen})}
@@ -218,6 +210,7 @@ const BuyPage: Component = () => {
 					<Loader loading={currProjectRequest.fetching}>
 						<FormPage
 							title=''
+							background={"/public/image/background/buy-page-bg.png"}
 							classes={{body: "flex-gap-y-6", wrapper: "relative"}}
 							outsideElement={
 								<SelectModalWrapper open={tokenModalOpen}>

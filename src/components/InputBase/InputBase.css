@@ -25,6 +25,7 @@
 } */
 
 .input-root > * {
+	background-color: #141C26;
 	@apply
 		z-[2]
 }

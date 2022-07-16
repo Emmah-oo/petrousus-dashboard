@@ -52,37 +52,39 @@ const LoginPage: Component = () => {
 		<div>
 		<Header />
 		<Page path="/login" title="Login" onlyLoggedOut>
-			<FormPage title="Sign in" background={"/image/background/background.png"}>
-				<Form
-					initialValues={initialValues}
-					onSubmit={onSubmit}
-				>
-					<FormInput
-						field="email"
-						icon={EmailIcon}
-						placeholder="Email"
-						autoCapitalize="off"
-						autoComplete="email"
-					/>
-					<FormInput
-						field="password"
-						icon={PasswordIcon}
-						placeholder="Password"
-						visibilityToggle
-						autoCapitalize="off"
-						autoComplete="current-password"
-					/>
-					<Link to="/forgot-password" className="inline-block mb-4 text-right forgot-pass">Forgot password</Link>
-					<div className="login-footer flex-gap-y-4 flex flex-col <xs:mt-8">
-						<Button className="login-btn" loading={loginRequest.fetching}>
-							Sign in
-						</Button>
-						<span>
-						<p>Don't have an account?</p> <Link to="/register" className="link">Sign up</Link>
-						</span>
-					</div>
-				</Form>
-			</FormPage>
+			<div className="login-card">
+				<FormPage title="Sign in" background={"/image/background/background.png"}>
+					<Form
+						initialValues={initialValues}
+						onSubmit={onSubmit}
+					>
+						<FormInput
+							field="email"
+							icon={EmailIcon}
+							placeholder="Email"
+							autoCapitalize="off"
+							autoComplete="email"
+						/>
+						<FormInput
+							field="password"
+							icon={PasswordIcon}
+							placeholder="Password"
+							visibilityToggle
+							autoCapitalize="off"
+							autoComplete="current-password"
+						/>
+						<Link to="/forgot-password" className="inline-block mb-4 text-right forgot-pass">Forgot password</Link>
+						<div className="login-footer flex-gap-y-4 flex flex-col <xs:mt-8">
+							<Button className="login-btn" loading={loginRequest.fetching}>
+								Sign in
+							</Button>
+							<span className="span">
+							<p>Don't have an account?</p> <Link to="/register" className="link">Sign up</Link>
+							</span>
+						</div>
+					</Form>
+				</FormPage>
+			</div>
 		</Page>
 		</div>
 	)

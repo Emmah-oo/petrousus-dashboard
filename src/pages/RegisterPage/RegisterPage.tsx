@@ -232,7 +232,7 @@ const RegisterPage: Component = () => {
 						<Button color="primary" loading={registerRequest.fetching} className="login-btn">
 									Create Account
 						</Button>
-						<span className="text-center">
+						<span className="text-center span">
 								<p>Already have account? </p><Link to="/login" className="link">Sign in</Link>
 						</span>
 					</FormPage>

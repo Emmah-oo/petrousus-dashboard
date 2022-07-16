@@ -3,6 +3,7 @@ import Card, { CardBody, CardTitle } from "../../components/Card"
 import Form from "../../components/Form"
 import FormInput from "../../components/FormInput"
 import Page from "../../components/Page"
+import LoggedInHeader from "../../components/LoggedInHeader"
 import { AlertContext } from "../../context/AlertContext"
 import { AuthContext } from "../../context/AuthContext"
 import { Component } from "../../types/Util"
@@ -63,16 +64,7 @@ export const WalletCard: Component = () => {
 
 	return (
 		<div className="main-body">
-			<div className='language py-5 float-right'>
-				<img src={Globe} alt='Globe' />
-				<select name='select' className='language-select'>
-					<option value='eng'>English</option>
-					<option value='esp'>Spanish</option>
-					<option value='ita'>Italian</option>
-					<option value='ger'>German</option>
-					<option value='frn'>French</option>
-				</select>
-			</div>
+			<LoggedInHeader />
 				<Card className="wallet-card">
 					<CardBody className="wallet-body">
 						<div className="wallet-title">
