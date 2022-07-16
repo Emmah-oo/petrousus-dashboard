@@ -1,0 +1,35 @@
+
+  .transaction-div{
+    background: #1d2836;
+       margin: 0rem 2rem;
+       border-radius: 10px;
+  }
+  table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    text-align: center;
+    color: #fff !important;
+  }
+  th {
+    text-align: center;
+    color: #fff;
+  }
+  table tr {
+    background: #1d2836;
+    text-align: left;
+    font-weight: bold;
+  }
+  table th,
+  table td {
+    padding: 15px 15px;
+    text-align: center;
+  }
+  table tr {
+    text-align: center;
+    border-bottom: 2px solid #272b30;
+  }
+  
+img{
+    object-fit: contain;
+}

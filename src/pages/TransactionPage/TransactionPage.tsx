@@ -8,6 +8,7 @@ import LoggedInHeader from "../../components/LoggedInHeader"
 
 
 import "./TransactionPage.css"
+import FakeTransactionList from '../../components/TransactionList/FakeTransactionList'
 
 const TransactionPage: Component = () => {
 	const { currentProject, currProjectRequest } = useContext(ProjectContext)
@@ -21,7 +22,7 @@ const TransactionPage: Component = () => {
                 <div className="card-header">
                     Transactions
                 </div>
-                <TransactionList />
+                <FakeTransactionList />
             </div>
 		</Page>
 	)
