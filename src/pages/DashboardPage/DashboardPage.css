@@ -21,15 +21,15 @@
 
 .head {
 	font-size: 2rem !important;
-	margin-left: 1.5rem !important;
+	margin-left: 2rem !important;
+	margin-top: 2rem;
+	font-weight: 500;
 }
 
 .dashboard-card {
 	/* background: #1d2836; */
-	margin: 1rem 1rem;
 	padding: 0 !important;
 	border-radius: 10px;
-	width: 95%;
 	@apply
 		flex flex-col
 }
@@ -42,6 +42,8 @@
 }
 
 .dashboard-card .card-header {
+	background: #18222E;
+	border-radius: 8px;
 	@apply
 		flex
 		items-center
@@ -74,6 +76,42 @@
 	@apply
 		mx-auto
 }
+
 .table-header{
 	margin-left: 3rem !important;
+}
+
+.table-data {
+	display: flex;
+	padding: 1rem 2rem;
+	width: 100%;
+	align-items: center;
+	gap: 10px;
+}
+
+/* .dashboard-language {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 1.5rem 0;
+	background: #18222E;
+	cursor: pointer;
+	border: 0;
+	outline: 0;
+} */
+
+.dashboard-container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.dashboard-card-2 {
+	background: #18222E;
+	margin: 0 2rem;
+	border-radius: 8px;
+}
+
+.title {
+ font-weight: bold;
+ font-size: 1.5rem;
 }

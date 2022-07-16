@@ -1,7 +1,13 @@
-
 .input-container {
+	border: 1px solid #fff;
+	background: linear-gradient(0deg, #141C26, #141C26),
+	linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
 	@apply
 		inline-flex
+}
+
+.input-container:hover {
+	border: 1px solid #6FBF86;
 }
 
 .input-container.round {
@@ -20,6 +26,7 @@
 }
 
 .input-container input {
+	padding: 0 1rem;
 	@apply
 		bg-transparent
 		outline-none
@@ -38,7 +45,7 @@
 
 .input-wrapper {
 	@apply
-		flex-1 flex p-4
+		flex-1 flex 
 }
 
 .input-container input:-webkit-autofill,

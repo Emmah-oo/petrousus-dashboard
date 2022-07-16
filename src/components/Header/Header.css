@@ -6,7 +6,7 @@ nav {
     padding: 0 3rem;
 }
 
-.language {
+.language-main {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +16,7 @@ nav {
 .language-select {
     border: 0;
     outline: 0;
-    background-color: transparent;
+    background: #18222e;
     color: #fff;
     cursor: pointer;
 }

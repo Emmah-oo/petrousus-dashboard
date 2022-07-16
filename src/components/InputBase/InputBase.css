@@ -1,7 +1,6 @@
 .input-root {
 	--label-width: 0rem;
-	--input-root-bg: var(--theme-background-contrast);
-	--outline-col: var(--theme-primary-main);
+	--outline-col: green;
 	@apply
 		relative
 		inline-flex
@@ -12,7 +11,7 @@
 		min-h-[2rem]
 		transition-all
 		outline-offset-0
-		outline-0 outline-[var(--outline-col)] outline-solid
+		outline-0 outline-[var(--outline-col)] 
 		z-[4]
 		text-base
 }
@@ -21,11 +20,12 @@
 	--input-root-bg: var(--theme-background-paper);	
 }
 
-.input-root.light {
+/* .input-root.light {
 	--input-root-bg: var(--theme-background-paperLight);	
-}
+} */
 
 .input-root > * {
+	background-color: #141C26;
 	@apply
 		z-[2]
 }
@@ -81,7 +81,7 @@
 	@apply
 		relative
 		flex items-center justify-center
-		p-4
+		
 }
 
 .input-root .icon-container svg {
@@ -134,3 +134,5 @@
 		flex-1
 		relative
 }
+
+

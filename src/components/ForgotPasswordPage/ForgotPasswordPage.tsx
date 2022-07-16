@@ -4,6 +4,7 @@ import Form from "../Form"
 import FormInput from "../FormInput"
 import FormPage from "../FormPage"
 import Page from "../Page"
+import Header from "../Header"
 
 import "./ForgotPasswordPage.css"
 
@@ -53,37 +54,44 @@ const ForgotPasswordPage: Component = () => {
 	}
 
 	return (
+		
 		<Page path="/forgot-password" title="Forgot Password" onlyLoggedOut>
-			<FormPage
-				title="Forgot Password"
-				background={"/image/background/hexagons.svg"}
-				classes={{card: "w-100"}}
-			>
-				<Form
-					onSubmit={sendPasswordReset}
-					initialValues={initialValues}
-					validationSchema={Yup.object().shape({email: Yup.string().required("Can't be empty").email("Invalid email")})}
+			<Header />
+			<div className="forgot-pass">
+				<FormPage
+					title="Forgot Password"
+					background={"/image/background/background.png"}
+					classes={{card: "w-100"}}
 				>
-					<FormInput
-						field="email"
-						icon={EmailIcon}
-						placeholder="Email"
-						autoCapitalize="off"
-						autoComplete="email"
-					/>
-					<Link to="/login" className="inline-block mb-4 text-right">Back to login</Link>
-					<Button
-						type="submit"
-						color="primary"
-						className="mt-4"
-						loading={forgotPasswordRequest.fetching}
-						disabled={timeLeft > 0}
-					>
-						Send Password Reminder{timeLeft > 0 && ` (${timeLeft})`}
-					</Button>
-				</Form>
-			</FormPage>
+					
+						<Form
+							onSubmit={sendPasswordReset}
+							initialValues={initialValues}
+							validationSchema={Yup.object().shape({email: Yup.string().required("Can't be empty").email("Invalid email")})}
+						>
+							<FormInput
+								field="email"
+								icon={EmailIcon}
+								placeholder="Email"
+								autoCapitalize="off"
+								autoComplete="email"
+							/>
+							<Link to="/login" className="inline-block mb-4 text-right">Back to login</Link>
+							<Button
+								type="submit"
+								color="primary"
+								className="mt-4"
+								loading={forgotPasswordRequest.fetching}
+								disabled={timeLeft > 0}
+							>
+								Send Password Reminder{timeLeft > 0 && ` (${timeLeft})`}
+							</Button>
+						</Form>
+					
+				</FormPage>
+			</div>
 		</Page>
+		
 	)
 }
 

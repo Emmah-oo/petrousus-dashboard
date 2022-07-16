@@ -1,25 +1,30 @@
-.tr td:nth-of-type(n + 2) {
-  color: #6fbf86;
+tr td:nth-of-type(n + 2) {
+  background: linear-gradient(180deg, #6FBF86 0%, #34B1A6 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 table {
   border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 0.9em;
-  margin: 0rem 2rem;
+  font-size: 15px;
+  min-width: 100%;
 }
+
 th {
   color: #fff;
 }
+
 table tr {
-  background: #1d2836;
+  /* background: #1d2836; */
   text-align: left;
   font-weight: bold;
 }
 table th,
 table td {
-  padding: 15px 15px;
+  padding: 15px 35px;
 }
+
 table tr {
-  border-bottom: 2px solid #272b30;
+  border-bottom: 1px solid #272b30;
 }
