@@ -109,5 +109,11 @@
 }
 
 .sidebar .logo {
-	margin-top: -1.8rem;
+	margin-top: -1rem;
+}
+
+@media (max-width: 400px) {
+	.sidebar .list>.button {
+		font-size: .5rem;
+	}
 }

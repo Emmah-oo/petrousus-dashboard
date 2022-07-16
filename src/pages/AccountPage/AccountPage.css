@@ -30,6 +30,7 @@
 	background: #18222E;
 	border-radius: 8px;
 	order: 1;
+	margin-top: 1rem !important;
 	@apply
 		w-[calc(100%-1rem)]
 		max-w-150 flex-[2]
@@ -62,7 +63,7 @@
 .wallet-body {
 	background: #18222E;
 	border-radius: 8px;
-	margin-top: 3rem;
+	margin: 3rem 0;
 }
 
 .profile-title {
@@ -82,16 +83,7 @@
 	width: 100%;
 	gap: 0;
 }
-/* 
-.language {
-	width: 100%;
-	margin-bottom: 5rem;
-	display: flex;
-	margin-top: -1rem;
-	align-items: center;
-	justify-content: flex-end !important;
-	padding: 0 3rem;
-	background: #18222e;
-	border: 0;
-	outline: 0;
-} */
+
+.gap-4 > * {
+	margin: 0 !important;
+}

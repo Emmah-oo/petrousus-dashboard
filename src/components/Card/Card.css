@@ -93,3 +93,9 @@
 .card .transaction-details {
 	background: linear-gradient(0deg, #141C26, #141C26), linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)) !important;
 }
+
+@media (max-width: 400px) {
+	.card-body, .card-title {
+		padding: 1rem;
+	}
+}

@@ -8,3 +8,26 @@
 	border: 0;
 	outline: 0;
 }
+
+.petrousus {
+	display: none;
+}
+
+@media (max-width: 900px) {
+	.petrousus {
+		display: block;
+	}
+
+	nav {
+		display: flex;
+		justify-content: space-between !important;
+		width: 100%;
+		padding: 0 !important;
+	}
+}
+
+@media (max-width: 500px) {
+	.LoggedInHeader {
+		padding: 0 1rem;
+	}
+}

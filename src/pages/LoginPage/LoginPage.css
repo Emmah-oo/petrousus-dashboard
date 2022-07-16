@@ -20,3 +20,42 @@ p {
 .forgot-pass {
     font-size: 10px;
 }
+
+.login-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    padding-top: 2rem;
+}
+
+.showcase-img {
+    width: 100%;
+    margin: 2rem 4rem 0 0;
+}
+
+.showcase-img img {
+    width: 100%;
+}
+
+/* .form-card {
+    width: 50%;
+    margin-left: 1rem;
+} */
+
+@media (max-width: 700px) {
+    .login-card {
+        grid-template-columns: 1fr;
+        margin-left: 2rem;
+    }
+
+    .showcase-img {
+        order: -1;
+        width: 65%;
+    }
+}
+
+/* @media (max-width: 500px) {
+    .login-card {
+        height: 50vh;
+    }
+} */

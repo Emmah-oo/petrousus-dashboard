@@ -18,6 +18,8 @@ import { AuthContext } from "../../context/AuthContext"
 import { AlertContext } from "../../context/AlertContext"
 import { useContext } from "react"
 
+import Showcase from "../../svg/icons/bg-cubes.png"
+
 const LoginPage: Component = () => {
 	const authContext = useContext(AuthContext)
 	const alertContext = useContext(AlertContext)
@@ -53,7 +55,7 @@ const LoginPage: Component = () => {
 		<Header />
 		<Page path="/login" title="Login" onlyLoggedOut>
 			<div className="login-card">
-				<FormPage title="Sign in" background={"/image/background/background.png"}>
+				<FormPage title="Sign in" background={"/image/background/background.svg"}>
 					<Form
 						initialValues={initialValues}
 						onSubmit={onSubmit}
@@ -84,6 +86,9 @@ const LoginPage: Component = () => {
 						</div>
 					</Form>
 				</FormPage>
+				<div className="showcase-img">
+					<img src={Showcase} alt="" />
+				</div>
 			</div>
 		</Page>
 		</div>

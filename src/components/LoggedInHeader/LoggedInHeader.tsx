@@ -9,6 +9,7 @@ const LoggedInHeader: Component = () => {
 	return (
 		<div className="LoggedInHeader">
 			<nav>
+                <img src= {Logo} alt="" className="petrousus" />
                 <div className="language-main">
                     <img src={Globe} alt="Globe" />
                     <select name="select" className="language-select">

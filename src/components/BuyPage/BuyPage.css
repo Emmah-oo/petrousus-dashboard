@@ -1,8 +1,8 @@
 .buy-page {
+	margin-top: 5rem;
 	@apply
 		flex-1
 }
-
 
 .buy-page .card {
 	margin-left: 15rem;
@@ -181,6 +181,12 @@
 	margin-bottom: -3rem;
 }
 
+.buy-page .card {
+	max-width: 60%;
+	margin: 0 auto;
+	margin-bottom: 3rem;
+}
+
 
 .btn{
 	background: linear-gradient(180deg, #6FBF86 0%, #34B1A6 100%);
@@ -194,8 +200,22 @@
 	width: 100%;
 }
 
-@media (min-width: 501px) {
+@media (max-width: 700px) {
+	.buy-page .card {
+		max-width: 90%;
+	}
+}
+
+@media (max-width: 501px) {
 	.form-card {
 		width: 100%;
+	}
+
+	.buy-page .card {
+		max-width: 90%;
+	}
+
+	.buy-page .summary-container {
+		flex-direction: column;
 	}
 }

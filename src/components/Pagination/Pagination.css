@@ -1,7 +1,6 @@
 .pagination-container {
 	@apply
 		flex flex-col
-		h-full
 }
 
 .pagination-content {

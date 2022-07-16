@@ -1,10 +1,11 @@
 .form-page {
 	overflow: hidden;
+	/* margin-left: 2.5rem; */
+	margin-right: 2.5rem;
 	@apply
 		w-full
 		text-left
 		<xs:h-auto
-		<xs:min-h-[var(--screen-height)]
 }
 
 .form-background {
@@ -26,19 +27,43 @@
 		max-h-[calc(var(--screen-height)-2rem)]
 		<md:max-h-[calc(var(--screen-height)-4rem)]
 		<xs:max-h-none
-		<xs:w-full
+		
 		<xs:flex-1
 		<xs:rounded-none
-		+xs:w-115
+		
 }
 
 .form-card-wrapper {
 	/* background: #18222ECC; */
-	border-radius: 8px;
-	width: 50%;
-	margin-top: 4rem;
-	margin-left: 2rem;
+	border-radius: 8px;	
 	@apply
 		/* mx-auto */
 		<xs:w-full
+}
+
+@media (max-width: 700px) {
+	.form-page {
+		margin-left: 0;
+	}
+	.form-card-wrapper {
+		width: 100%;
+	}
+}
+
+@media (max-width: 500px) {
+	.form-background {
+		display: block !important;
+	}
+}
+
+@media (max-width: 500px) {
+	.form-card {
+		width: 100% !important;
+		margin: 0 auto;
+	}
+
+	.form-page {
+		width: 100% !important;
+		margin-left: 0 !important;
+	}
 }

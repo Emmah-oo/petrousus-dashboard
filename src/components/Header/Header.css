@@ -20,3 +20,13 @@ nav {
     color: #fff;
     cursor: pointer;
 }
+
+@media (max-width: 700px) {
+    .logo {
+        display: none;
+    }
+
+    nav {
+        justify-content: flex-end;
+    }
+}

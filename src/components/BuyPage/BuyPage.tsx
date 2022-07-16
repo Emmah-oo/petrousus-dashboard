@@ -187,7 +187,7 @@ const BuyPage: Component = () => {
 	return (
 		<Page path="/buy" title="Buy" userRestricted>
 			<div className="buy-container">
-			<LoggedInHeader />
+				<LoggedInHeader />
 				<h1 className="buy-title">Buy Token</h1>
 				<Form
 					className={clsx("buy-page", {"modal-open": tokenModalOpen})}

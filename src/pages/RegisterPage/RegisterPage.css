@@ -22,6 +22,40 @@ p {
     gap: 5px;
 }
 
-/* .forgot-pass {
-    font-size: 10px;
+.register {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.showcase-img {
+    margin-left: -4rem;
+}
+
+@media (max-width: 700px) {
+    .register {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-img {
+        order: -1;
+        width: 65%;
+    }
+}
+
+@media (max-width: 700px) {
+    .register {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-img {
+        margin-left: 0;
+    }
+}
+
+
+/* @media (max-width: 500px) {
+    .register{
+        height: 50vh;
+    }
 } */

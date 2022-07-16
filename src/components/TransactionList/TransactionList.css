@@ -210,3 +210,7 @@ span {
 	display: inline-block;
 }
 
+.transaction-details .qr-code {
+	width: 50%;
+	margin: 0 auto;
+}

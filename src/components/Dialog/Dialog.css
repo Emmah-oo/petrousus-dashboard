@@ -1,5 +1,6 @@
 .dialog {
-	transform: translate(-35%, -50%);
+	transform: translate(-50%, -50%);
+	width: 50%;
 	z-index: 21;
 	@apply
 		fixed
@@ -38,4 +39,26 @@
 	@apply
 		absolute
 		z-[5]
+}
+
+@media (max-width: 1000px) {
+	.dialog {
+		width: 70%;
+	}
+}
+
+@media (max-width: 700px) {
+	.dialog {
+		width: 90%;
+	}
+}
+
+@media (max-width: 500px) {
+	.dialog {
+		width: 100%;
+	}
+
+	.transaction-details .pending-container {
+		flex-direction: column;
+	}
 }

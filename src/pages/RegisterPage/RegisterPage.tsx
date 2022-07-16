@@ -36,6 +36,8 @@ import TieredBonusButtons from "../../components/TieredBonusButtons"
 import { Loader } from "../../components/Loader"
 import { ProjectContext } from "../../context/ProjectContext"
 
+import Showcase from "../../svg/icons/bg-cubes.png"
+
 const DropdownIcon = _DropdownIcon as unknown as Component<any>
 
 const RegisterPage: Component = () => {
@@ -131,112 +133,78 @@ const RegisterPage: Component = () => {
 		<div>
 			<Header />
 			<Page path="/register" title="Register" onlyLoggedOut>
-				<Form
-					className="register-page flex-1"
-					initialValues={initialValues}
-					onSubmit={onSubmit}
-					validationSchema={registerSchema}
-					values={values}
-					onUpdate={(newVals) => setValues(newVals as unknown as typeof values)}
-				>
-					<FormPage
-						title="Sign up"
-						background={"/image/background/background.png"}
-						classes={{body: "flex flex-col flex-gap-y-4", wrapper: "relative"}}
-						outsideElement={(
-							<SelectModalWrapper open={tokenModalOpen}>
-								<FormTokenSelectModal
-									field="token"
-									open={tokenModalOpen}
-									onClose={() => setTokenModalOpen(false)}
-									bonuses={activeStage?.bonuses.payment_tokens}
-								/>
-							</SelectModalWrapper>
-						)}
+				<div className="register">
+					<Form
+						className="register-page flex-1"
+						initialValues={initialValues}
+						onSubmit={onSubmit}
+						validationSchema={registerSchema}
+						values={values}
+						onUpdate={(newVals) => setValues(newVals as unknown as typeof values)}
 					>
-						<div className="flex flex-gap-x-2">
-							<FormInput
-								field="first_name"
-								icon={NameIcon}
-								placeholder="First Name"
-								autoComplete="given-name"
-								autoCapitalize="words"
-								className="flex-[1.3]"
-							/>
-							<FormInput
-								field="last_name"
-								placeholder="Last Name"
-								autoComplete="family-name"
-								autoCapitalize="words"
-								className="flex-1"
-							/>
-						</div>
-						<FormInput
-							field="email"
-							icon={EmailIcon}
-							placeholder="Email"
-							autoComplete="email"
-							autoCapitalize="off"
-						/>
-						<FormInput
-							field="password"
-							icon={PasswordIcon}
-							placeholder="Password"
-							autoCapitalize="off"
-							visibilityToggle
-						/>
-						<PhoneInput
-							numberField="phone_number"
-							codeField="country_code"
-						/>
-						<NationalityInput field="nationality" />
-						{/* <Loader loading={activeStageRequest.fetching || currProjectRequest.fetching}>
-							<div className="flex flex-col flex-gap-y-4">
-								<h2 className="text-lg">Purchase Details</h2>
-								<CurrencyItemDisplay
-									component={Button}
-									className="py-3 !justify-start w-full group"
-									color="bg-contrast"
-									type="button"
-									onClick={() => setTokenModalOpen(true)}
-									currencyItem={values.token}
-									bonuses={activeStage?.bonuses.payment_tokens}
-									classes={{bonusChip: "bg-background-paperLight group-hover:bg-background-paperHighlight transition-background-color"}}
-								>
-									<DropdownIcon className="h-3 w-3 ml-auto text-action-unselected group-hover:text-text-primary transition-color" />
-								</CurrencyItemDisplay>
-								<div className="flex flex-col">
-									<FormNumberInput
-										field="usd_amount"
-										placeholder="Purchase Amount $"
-										autoCapitalize="off"
-										rightContent={<CurrencyItemDisplay className="w-auto" currencyItem={dollarItem} />}
+						<FormPage
+							title="Sign up"
+							background={"/image/background/background.svg"}
+							classes={{body: "flex flex-col flex-gap-y-4", wrapper: "relative"}}
+							outsideElement={(
+								<SelectModalWrapper open={tokenModalOpen}>
+									<FormTokenSelectModal
+										field="token"
+										open={tokenModalOpen}
+										onClose={() => setTokenModalOpen(false)}
+										bonuses={activeStage?.bonuses.payment_tokens}
 									/>
-									<TieredBonusButtons
-										bonuses={activeStage?.bonuses.tiered_fiat || []}
-										onSelect={(item) => updateValue("usd_amount", item.amount)}
-										usdAmount={values.usd_amount}
-									/>
-								</div>
-							</div> */}
-							{/* <div className="flex items-center">
-								<FormCheckbox
-									field="terms_accepted"
-									className="inline-block"
+								</SelectModalWrapper>
+							)}
+						>
+							<div className="flex flex-gap-x-2">
+								<FormInput
+									field="first_name"
+									icon={NameIcon}
+									placeholder="First Name"
+									autoComplete="given-name"
+									autoCapitalize="words"
+									className="flex-[1.3]"
 								/>
-								<span className="ml-3">I agree to the Terms and Conditions and Privacy Policy</span>
+								<FormInput
+									field="last_name"
+									placeholder="Last Name"
+									autoComplete="family-name"
+									autoCapitalize="words"
+									className="flex-1"
+								/>
 							</div>
-							<div className="login-footer flex-gap-y-4 flex flex-col mt-2 <xs:mt-2">
-							</div> */}
-						{/* </Loader> */}
-						<Button color="primary" loading={registerRequest.fetching} className="login-btn">
-									Create Account
-						</Button>
-						<span className="text-center span">
-								<p>Already have account? </p><Link to="/login" className="link">Sign in</Link>
-						</span>
-					</FormPage>
-				</Form>
+							<FormInput
+								field="email"
+								icon={EmailIcon}
+								placeholder="Email"
+								autoComplete="email"
+								autoCapitalize="off"
+							/>
+							<FormInput
+								field="password"
+								icon={PasswordIcon}
+								placeholder="Password"
+								autoCapitalize="off"
+								visibilityToggle
+							/>
+							<PhoneInput
+								numberField="phone_number"
+								codeField="country_code"
+							/>
+							<NationalityInput field="nationality" />
+							<Button color="primary" loading={registerRequest.fetching} className="login-btn">
+										Create Account
+							</Button>
+							<span className="text-center span">
+									<p>Already have account? </p><Link to="/login" className="link">Sign in</Link>
+							</span>
+						</FormPage>
+					</Form>
+					<div className="showcase-img">
+						<img src={Showcase} alt="" />
+					</div>
+				</div>
 			</Page>
 		</div>
 	)
