@@ -4,6 +4,7 @@ import { ProjectContext } from "../../context/ProjectContext"
 import { Component } from "../../types/Util"
 import TransactionList from "../../components/TransactionList"
 import Globe from '../../svg/icons/globe.png';
+import LoggedInHeader from "../../components/LoggedInHeader"
 
 
 import "./TransactionPage.css"
@@ -16,16 +17,7 @@ const TransactionPage: Component = () => {
 	return (
 		<Page path="/Transaction" title="Transactions">
 			<div className="transaction-card">
-                <div className='transaction-language'>
-                    <img src={Globe} alt='Globe' />
-                    <select name='select' className='language-select'>
-                    <option value='eng'>English</option>
-                    <option value='esp'>Spanish</option>
-                    <option value='ita'>Italian</option>
-                    <option value='ger'>German</option>
-                    <option value='frn'>French</option>
-                    </select>
-                </div>
+            <LoggedInHeader />
                 <div className="card-header">
                     Transactions
                 </div>

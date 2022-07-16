@@ -12,7 +12,7 @@ p {
     color: rgb(181, 181, 181);
 }
 
-span {
+.span {
     display: flex;
     gap: 5px;
 }

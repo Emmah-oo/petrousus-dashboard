@@ -1,8 +1,7 @@
 .form-page {
+	overflow: hidden;
 	@apply
-		flex flex-col
 		w-full
-		justify-center
 		text-left
 		<xs:h-auto
 		<xs:min-h-[var(--screen-height)]
@@ -25,7 +24,6 @@
 	@apply
 		overflow-y-auto
 		max-h-[calc(var(--screen-height)-2rem)]
-
 		<md:max-h-[calc(var(--screen-height)-4rem)]
 		<xs:max-h-none
 		<xs:w-full
@@ -35,11 +33,12 @@
 }
 
 .form-card-wrapper {
-	background: #18222ECC;
+	/* background: #18222ECC; */
 	border-radius: 8px;
 	width: 50%;
 	margin-top: 4rem;
+	margin-left: 2rem;
 	@apply
-		mx-auto
+		/* mx-auto */
 		<xs:w-full
 }

@@ -211,7 +211,7 @@ export const TransactionDetails: Component<TransactionDetailsProps> = ({ transac
 		<Dialog {...others} className={clsx("transaction-details", others.className)}>
 			<Card className="transaction-details">
 				<CardTitle center>
-					Transaction
+				 <h1 className="dialog-header">Transaction</h1>
 				</CardTitle>
 				<CardBody className="transaction-details-body flex-gap-y-2">
 					{transaction?.status === "pending" && (

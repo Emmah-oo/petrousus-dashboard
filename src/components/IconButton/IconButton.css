@@ -10,7 +10,7 @@
 		text-text-primary
 }
 
-.icon-button::before {
+/* .icon-button::before {
 	content: " ";
 	@apply
 		h-12 w-12
@@ -20,7 +20,7 @@
 		!-translate-x-1/2 !-translate-y-1/2
 		transition-colors
 		rounded-full
-}
+} */
 
 .icon-button:not(.disabled,.loading):hover::before {
 	@apply

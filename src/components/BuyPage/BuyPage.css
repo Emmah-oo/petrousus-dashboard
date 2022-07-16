@@ -3,7 +3,13 @@
 		flex-1
 }
 
+
 .buy-page .card {
+	margin-left: 15rem;
+	margin-bottom: 5rem;
+	background: rgba(24, 34, 46, 0.8);
+	backdrop-filter: blur(40px);
+	;
 	@apply
 		+xs:rounded-card
 		flex flex-col
@@ -166,13 +172,13 @@
 	background-color: #131a22;
 	width: 100%;
 	height: 100%;
+	z-index: 1;
 }
 
 .buy-title {
 	font-size: 1.5rem;
 	padding: 2rem 2rem;
 	margin-bottom: -3rem;
-    margin-top: 4rem;
 }
 
 
