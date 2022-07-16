@@ -1,4 +1,4 @@
-tr td:nth-of-type(n + 2) {
+.tr td:nth-of-type(n + 2) {
   color: #6fbf86;
 }
 
@@ -6,7 +6,6 @@ table {
   border-collapse: collapse;
   margin: 25px 0;
   font-size: 0.9em;
-  min-width: 400px;
   margin: 0rem 2rem;
 }
 th {

@@ -7,6 +7,7 @@ import Globe from '../../svg/icons/globe.png';
 
 
 import "./TransactionPage.css"
+import FakeTransactionList from '../../components/TransactionList/FakeTransactionList'
 
 const TransactionPage: Component = () => {
 	const { currentProject, currProjectRequest } = useContext(ProjectContext)
@@ -29,7 +30,7 @@ const TransactionPage: Component = () => {
                 <div className="card-header py-6 px-10 text-2xl font-bold">
                     Transactions
                 </div>
-                <TransactionList />
+                <FakeTransactionList />
             </div>
 		</Page>
 	)

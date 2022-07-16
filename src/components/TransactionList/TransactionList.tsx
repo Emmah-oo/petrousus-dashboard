@@ -190,7 +190,7 @@ export const TransactionItem: Component<TransactionItemProps> = ({ transaction, 
 							onActionClick(transaction)
 						}}
 					>
-						{transaction.status === "pending" ? "Pay" : "Details"}
+						{transaction.status === "pending" ? "" : "Details"}
 					</Button>
 				)}
 			</span>
